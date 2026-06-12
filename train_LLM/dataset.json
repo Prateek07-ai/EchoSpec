@@ -1,0 +1,71 @@
+[
+    {
+        "question": "What is a transformer?",
+        "answer" : "A transformer is a passive electrical device that transfers electrical energy between circuits through electromagnetic induction, primarily to step up (increase) or step down (decrease) alternating current (AC) voltage levels without changing frequency."
+    },
+    {
+        "source" : "63MVA Power trafo TSR1 020124.pdf",
+        "question": "what are the loss in the transformer?",
+        "answer" : "no_load_loss_kw_max: '29 kW', load_loss_75C_kw_max: '160 kW', total_loss_75C_kw_max: '189 kW', additional_info: ['Loss/kg at 75°C and flux density corresponding to rated voltage', 'Core loss vs flux density characteristic at 50Hz for the core material shall be furnished']"
+    },
+     {
+        "quetion": "what is ONAN ratings",
+        "answer": "Transformer rating: 63 MVA, 63 MVA refers to ONAN (i.e., Oil Natural Air Natural cooling)"
+    },
+    {
+        "source" : "63MVA Power trafo TSR1 020124.pdf",
+        "quetion": "what is ONAN ratings and ONAF ratings",
+        "answer": "Transformer rating: 63/80 MVA, 63 MVA refers to ONAN (i.e., Oil Natural Air Natural cooling) and 80 MVA refers to ONAF (i.e., Oil Natural Air Forced cooling)"
+    },
+    {
+        "instruction": "Compare the two documents.",
+        "input1": {
+                    "TS": "ONAF = 80MVA",
+                    "GPT": "Not present"
+                },
+        "output1":{
+                    "status": "Do not matched",
+                    "difference": "ONOF has been removed"
+                },
+        "input2":{
+                    "TS": "Vector group = Ynyn0",
+                    "GPT": "Vector group = Ynyn0"
+                },
+        "output2":{
+                    "Status": "matched",
+                    "difference": "No difference present"
+                },
+        "input3":{
+                    "TS" : "Percentage impedance = 10% @ 80MVA (max.)",
+                    "GPT" : "Percentage impedance = 10%(+0,-10%Tol) @ 63MVA"
+                },
+        "output3": {
+                    "Status": "Do not Matched",
+                    "Difference": "In GPT there is no ONAF present so persentage impedence is difference"
+                },
+        "input4":{
+                    "TS": "Losses at rated voltage current & frequency at principal tap with no positive tolerances = 63/80MVA, 220/69kV, 10% Impedance @80MVA",
+                    "GPT": "Losses at rated voltage current & frequency at principal tap with no positive tolerances = @ 63 MVA base"
+                },
+        "output4" :{
+                    "Status":"Do not matched",
+                    "difference" : "There is no ONAF in GPT file ."
+                },
+        "input5":{
+                    "TS": "Frequency = 50Hz",
+                    "GPT": "Frequency = 50Hz"
+                },
+        "output5":{
+                    "Status": "matched",
+                    "difference": "No difference present"
+                },
+        "input6":{
+                    "TS": "No of Phase = 3",
+                    "GPT": "No of Phase = 3"
+                },
+        "output6":{
+                    "Status": "matched",
+                    "difference": "No difference present"
+                }
+    }
+]

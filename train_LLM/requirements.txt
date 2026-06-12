@@ -1,0 +1,12 @@
+# Core ML libraries
+torch==2.1.0
+transformers==4.39.3
+accelerate==0.28.0
+bitsandbytes==0.43.0
+
+# Unsloth for efficient fine-tuning
+unsloth==2026.5.2
+
+# Dataset handling
+datasets==2.18.0
+
